@@ -1,5 +1,6 @@
 # git stuff
-*.git
+.git/
+.gitattributes
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
