@@ -1,6 +1,8 @@
 # Download analysis output from Flywheel
 
-This is a tool to download output files from an analysis gear. It uses the Flywheel SDK to download data either for all subjects in a given project, or for a subset of subjects based on a user inputted list (CSV).
+This is a tool to download output files from a specified analysis gear. It uses the Flywheel SDK to download data either for all subjects in a given project, or for a subset of subjects based on a user inputted list (CSV).
+
+If user chooses to download data for all subjects in the project, it will download any available output files for the gear for every subject and session. If the user specifies a subset of subjects via an input CSV, every session for those subjects will be included. If the user specifies a subset of subjects and sessions in the input CSV (see *sub_list.csv* for an example), then only those sessions will be included.
 
 - [Getting Started](#getting-started)
   - [Dependencies](#dependencies)
@@ -20,7 +22,7 @@ First, download required packages:
 $ pip3 install -r requirements.txt
 ```
 
-If not already configured, install the Flywheel CLI and login: [Installation Instructions] (https://docs.flywheel.io/hc/en-us/articles/360008162214-Installing-the-Command-Line-Interface-CLI-)
+If not already configured, install the Flywheel CLI and login: [Installation Instructions](https://docs.flywheel.io/hc/en-us/articles/360008162214-Installing-the-Command-Line-Interface-CLI-)
 
 Then run the command with the following input arguments:
 
