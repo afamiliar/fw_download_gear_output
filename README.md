@@ -27,7 +27,7 @@ If not already configured, install the Flywheel CLI and login: [Installation Ins
 Then run the command with the following input arguments:
 
 ```console
-$ ./fw_download_analysis_files -h
+$ ./fw_download_analysis_files.py -h
 usage: fw_download_analysis_files.py [-h] -output_dir [OUTPUT_DIR] -fw_group_label
                                      [{d3b,corsica}] -fw_proj_label [FW_PROJ_LABEL]
                                      -gear_name [GEAR_NAME] -all_subjects [{y,n}]
