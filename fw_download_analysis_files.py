@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-# Python script to download acquisition files from Flywheel
+# Python script to download analysis gear output from Flywheel
 #       uses flywheel-sdk to download data based on a user inputted list (CSV)
 #
 #   created March 23, 2021
