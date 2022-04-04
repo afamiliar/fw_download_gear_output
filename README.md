@@ -38,7 +38,7 @@ arguments:
   -fw_group_label    Flywheel group that owns the project [d3b, corsica].
   -fw_proj_label     Flywheel project to download.
   -gear_name         Name of the gear to look for.
-  -all_subjects      Whether do download for all subjects in the project [y], or only a subset [n].
+  -all_subjects      Whether to download for all subjects in the project [y], or only a subset [n].
 
 optional arguments:
   -h, --help          show this help message and exit
