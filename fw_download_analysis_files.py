@@ -10,12 +10,6 @@
 # ./fw_download_gear_output output_dir fw_group_label fw_proj_label gear_name all_subjects [sub_list_file]
 #           ./fw_download_analysis_files.py -output_dir data/ -fw_group_label d3b --fw_proj_label Medullo_proc --gear_name captk-brats-pipeline --all_subjects n --sub_list_file sub_list.csv
 
-#out_dir='data/'
-#input_fn=[] # "sub_list.csv"
-#fw_group_label='d3b'
-#fw_proj_label='Medullo_proc'
-#gear_name = 'captk-brats-pipeline'
-
 # TO DO:
 #   -- consider including the following as optional inputs:
 #       include=[''] # file types
