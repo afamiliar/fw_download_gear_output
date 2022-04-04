@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 # Python script to download analysis gear output from Flywheel
 #       uses flywheel-sdk to download data based on a user inputted list (CSV)
@@ -7,8 +7,8 @@
 #   Modified March 29, 2022
 #   amf
 #
-#   fw_download_gear_output output_dir fw_group_label fw_proj_label gear_name all_subjects [sub_list_file]
-# python3 fw_download_analysis_files.py --output_dir data/ --fw_group_label d3b --fw_proj_label Medullo_proc --gear_name captk-brats-pipeline --all_subjects n --sub_list_file sub_list.csv
+# ./fw_download_gear_output output_dir fw_group_label fw_proj_label gear_name all_subjects [sub_list_file]
+#           ./fw_download_analysis_files.py -output_dir data/ -fw_group_label d3b --fw_proj_label Medullo_proc --gear_name captk-brats-pipeline --all_subjects n --sub_list_file sub_list.csv
 
 #out_dir='data/'
 #input_fn=[] # "sub_list.csv"
@@ -34,19 +34,13 @@ import csv
 import sys
 
 
-def main() -> int:
+def main():
     parser = argparse.ArgumentParser(
-        description="A tool to download result files from analysis containers in a Flywheel project.",
+        description="A tool to download output files from analysis containers in a Flywheel project.",
         formatter_class=argparse.ArgumentDefaultsHelpFormatter,
     )
     parser.add_argument(
-        "--output_dir",
-        nargs="?",
-        required=True,
-        help="Directory path to store the downloaded files locally.",
-    )
-    parser.add_argument(
-        "--fw_group_label",
+        "-fw_group_label",
         nargs="?",
         default="d3b",
         choices=["d3b", "corsica"],
@@ -54,26 +48,32 @@ def main() -> int:
         help="Flywheel group that project belongs to.",
     )
     parser.add_argument(
-        "--fw_proj_label",
+        "-fw_proj_label",
         nargs="?",
         help="Flywheel project to download data from.",
         required=True,
     )
     parser.add_argument(
-        "--gear_name",
+        "-output_dir",
+        nargs="?",
+        required=True,
+        help="Directory path to store the downloaded files locally.",
+    )
+    parser.add_argument(
+        "-gear_name",
         nargs="?",
         help="Name of the gear to look for output files from.",
         required=True,
     )
     parser.add_argument(
-        "--all_subjects",
+        "-all_subjects",
         nargs="?",
         choices=["y", "n"],
         help="Whether to download for all subjects in the project, or only look at a subset of subjects.",
         required=True,
     )
     parser.add_argument(
-        "--sub_list_file",
+        "-sub_list_file",
         nargs="?",
         help="If only want to download for a subset of subjects, indicate path to CSV file with columns: C-ID (required) and Session (optional).",
     )
